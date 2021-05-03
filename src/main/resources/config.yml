@@ -1,0 +1,383 @@
+### 7mi-TCT CONFIG ###
+
+### コンフィグを編集したら、必ず /tctreload をしてください。
+
+## ゲームのスタートなどができるプレイヤーを設定します。
+# 例
+# admin:
+#   - Steve
+#   - Alex
+#
+# オペレーターにadmin権限を与える場合はopと入力します。
+admin:
+  - op
+
+roles:
+## それぞれの役職の人数を変更します。
+#
+# 村人 - villagers
+# 医者 - healers
+# 探偵 - detectives
+# 人狼 - wolves
+# 狂人 - fanatics
+# 妖狐 - foxes
+#
+# 村人の場合は設定した値は最小値になります
+# 0にするとその役職は無効になります。
+  count:
+    villagers: 1
+    healers: 1
+    detectives: 1
+    wolves: 1
+    fanatics: 1
+    foxes: 1
+    immoral: 1
+# 例
+# count:
+#   villagers: 1
+#   healers: 1
+#   detectives: 1
+#   wolves: 1
+#   fanatics: 1
+#   foxes: 1
+#   immoral: 1
+#
+# 人数が7人の場合、
+# 村人: 1
+# 医者: 1
+# 探偵: 1
+# 人狼: 1
+# 狂人: 1
+# 妖狐: 1
+# 背徳者: 1
+#
+# 人数が8人の場合、
+# 村人: 2
+# 医者: 1
+# 探偵: 1
+# 人狼: 1
+# 狂人: 1
+# 妖狐: 1
+# 背徳者: 1
+#
+# 人数が9人の場合、
+# 村人: 3
+# 医者: 1
+# 探偵: 1
+# 人狼: 1
+# 狂人: 1
+# 妖狐: 1
+# 背徳者: 1
+#
+# 人数が6人以下の場合、
+# 開始不可
+
+
+#ゲーム開始時に所持しているコイン枚数
+#
+#デフォルト
+# coin:
+#   villagers: 0
+#   healers: 0
+#   detectives: 2
+#   wolves: 2
+#   fanatics: 0
+#   foxes: 1
+#   immoral: 0
+  coin:
+    villagers: 0
+    healers: 0
+    detectives: 2
+    wolves: 2
+    fanatics: 0
+    foxes: 1
+    immoral: 0
+  shop:
+    villager:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: false #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    detective:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: true #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: true #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: true #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: true #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: true #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    healer:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: false #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    wolf:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: true #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: true #時計...人狼
+      compass: true #コンパス...人狼
+      landmine: true #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: true #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: true #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    fanatic:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: false #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    fox:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: true #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+    immoral:
+      wood-sword: false #木の剣...全役職
+      bow: false #弓...全役職
+      arrow: false #矢...全役職
+      log-book: false #TCT Log Book...全役職
+      quickchat-a: false #クイックチャット (一緒)...全役職
+      quickchat-b: false #クイックチャット (村人)...全役職
+      quickchat-c: false #クイックチャット (怪しい)...全役職
+      quickchat-d: false #クイックチャット (人狼)...全役職
+      stone-sword: true #石剣 (強化武器)...全役職
+      strong-bow: true #つよい弓 (強化武器)...全役職
+      stick: true #棒...全役職
+      empty-bottle: true #空き瓶 (呪い)...全役職
+      healer-sword: false #医者の剣 (回復)...医者
+      detective-sword: false #探偵の剣 (即死)...探偵
+      wolf-sword: false #人狼の剣 (即死)...人狼
+      heal-station: false #回復ステーション (回復)...探偵
+      clock: false #時計...人狼
+      compass: false #コンパス...人狼
+      landmine: false #地雷 (クリーパーの頭)...人狼
+      speed-potion: true #俊敏ポーション (スピード)...全役職
+      heal-splash-potion: true #回復スプラッシュポーション (回復)...全役職
+      diamond-helmet: false #ダイヤのヘルメット (探偵の証明)...探偵
+      seed: false #種 (占い)...探偵
+      snowball: false #雪玉 (爆発)...人狼
+      milk: true #牛乳...全役職
+      gun: false #銃...妖狐、人狼、探偵
+      cracker: true #クラッカー (花火)...全役職
+
+
+countdown:
+  #デフォルト: 10秒
+  prestart: 10 #準備時間 (秒)
+  #デフォルト: 210秒
+  game: 210 #ゲーム残り時間 (秒)
+  addcount:
+    #デフォルト: 20秒
+    kill: 20 #キルしたときに増える時間 (秒)
+
+#デフォルト: 20秒
+quickchat-cooldown: 20 #クイックチャットのクールタイム (秒)
+
+#デフォルト: 20秒
+heal-station-cooldown: 20 #回復ステーションのクールタイム (秒)
+
+#デフォルト: 5秒
+landmine-cooldown: 5 #地雷のクールダウン (秒)
+
+#デフォルト: 5ブロック
+landmine-range: 5 #地雷の範囲 (ブロック)
+
+#デフォルト: 70秒
+fox-reveal-time-default: 70 #妖狐の正体がばれる時間 (秒)
+#デフォルト: 60秒
+fox-reveal-time: 60 #妖狐の正体がばれる時間 (秒)
+
+#デフォルト: 5秒
+heal-station-respawn-time: 5 #回復ステーションが元に戻るまでの時間 (秒)
+
+#デフォルト: 5
+seed-range: 5 #占いの範囲 (半径～ブロック)
+
+#デフォルト: 180秒後
+first-coin-time: 180 #コインが配られる時間 (秒後)
+
+#デフォルト: 180秒後
+detective-confirm-time: 180 #探偵の証明ができるようになる時間 (秒後)
+
+#ポーションエフェクトの設定
+potion-effect:
+  #呪い
+  slowness:
+    #デフォルト: 10s
+    duration: 10s #鈍足が付与される時間 (tickの時は t, 秒の時は s)
+    #デフォルト: 2
+    level: 2 #鈍足の強さ
+  #スピードポーション
+  speed:
+    #デフォルト: 180s
+    duration: 180s
+    #デフォルト: 1
+    level: 1
+  #回復スプラッシュポーション
+  heal:
+    #デフォルト: 2
+    level: 2
+
+#ゲーム中に付与されるエフェクトの設定
+effect:
+  #医者の剣で付与される再生エフェクト
+  healer-regeneration:
+    #デフォルト: 1s
+    duration: 1s
+    #デフォルト: 3
+    level: 3
+  #探偵が置いた回復ブロックをクリックしたときに付与される再生エフェクト
+  detective-regeneration:
+    #デフォルト: 2s
+    duration: 2s
+    #デフォルト: 3
+    level: 3
+  #人狼の時計をクリックしたときに付与される透明化エフェクト
+  wolf-invisible:
+    #デフォルト: 10s
+    duration: 10s
+
+#花火の設定
+fireworks:
+  #デフォルト: 1
+  power: 1 #花火の威力
+  #デフォルト: BURST
+  type: BURST #花火の種類
+  #デフォルト:
+  # - 0xFF0000
+  colors: #花火の色 (色コードを16進数, 10進数のどちらかで表す)
+    - 0xFF0000
+  #デフォルト:
+  # - 0xFF0000
+  fades: #花火のフェード
+    - 0xFF0000
